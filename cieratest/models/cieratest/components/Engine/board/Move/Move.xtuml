@@ -1,0 +1,93 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("d4745e63-a0bc-44fa-a237-f63f1e478ac1",
+	'Move',
+	1,
+	'Move',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("f3fca065-7db2-4412-9275-70b668a6ad27",
+	"d4745e63-a0bc-44fa-a237-f63f1e478ac1",
+	'findsquare',
+	'',
+	"d5732df7-1784-4839-ad60-8c7d5424f211",
+	0,
+	'select any sq from instances of Square;
+return sq;',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	1);
+INSERT INTO O_TPARM
+	VALUES ("59b1a0b1-8790-424d-b109-f5b24a4269ab",
+	"f3fca065-7db2-4412-9275-70b668a6ad27",
+	'ident',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("d5732df7-1784-4839-ad60-8c7d5424f211",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref<Square>',
+	'',
+	'',
+	'../board.xtuml');
+INSERT INTO O_TFR
+	VALUES ("a3943822-6ec6-4b92-afc0-412ff8729bee",
+	"d4745e63-a0bc-44fa-a237-f63f1e478ac1",
+	'eval',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'square = Move::findsquare( ident:self.fromto );',
+	1,
+	'',
+	"f3fca065-7db2-4412-9275-70b668a6ad27",
+	0,
+	2);
+INSERT INTO O_NBATTR
+	VALUES ("9acec2ab-6afe-42ac-9ab7-f9a7087eeddd",
+	"d4745e63-a0bc-44fa-a237-f63f1e478ac1");
+INSERT INTO O_BATTR
+	VALUES ("9acec2ab-6afe-42ac-9ab7-f9a7087eeddd",
+	"d4745e63-a0bc-44fa-a237-f63f1e478ac1");
+INSERT INTO O_ATTR
+	VALUES ("9acec2ab-6afe-42ac-9ab7-f9a7087eeddd",
+	"d4745e63-a0bc-44fa-a237-f63f1e478ac1",
+	"00000000-0000-0000-0000-000000000000",
+	'fromto',
+	'',
+	'',
+	'fromto',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"d4745e63-a0bc-44fa-a237-f63f1e478ac1");
+INSERT INTO O_ID
+	VALUES (1,
+	"d4745e63-a0bc-44fa-a237-f63f1e478ac1");
+INSERT INTO O_ID
+	VALUES (2,
+	"d4745e63-a0bc-44fa-a237-f63f1e478ac1");
+INSERT INTO PE_PE
+	VALUES ("d4745e63-a0bc-44fa-a237-f63f1e478ac1",
+	1,
+	"e5b17362-2c5f-4e30-b61a-c5751e61b393",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("e5b17362-2c5f-4e30-b61a-c5751e61b393",
+	"00000000-0000-0000-0000-000000000000",
+	"2f3d88a0-efde-45c2-8de5-29e6c6288805",
+	'board',
+	'',
+	0,
+	'../board.xtuml');
