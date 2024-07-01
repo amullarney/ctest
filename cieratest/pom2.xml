@@ -15,11 +15,27 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
   </properties>
+  <repositories>
+    <repository>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/mailetechnical/*</url>
+      <releases><enabled>true</enabled></releases>
+      <snapshots><enabled>false</enabled></snapshots>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/mailetechnical/*</url>
+      <releases><enabled>true</enabled></releases>
+      <snapshots><enabled>false</enabled></snapshots>
+    </pluginRepository>
+  </pluginRepositories>
   <dependencies>
     <dependency>
       <groupId>io.ciera</groupId>
       <artifactId>runtime</artifactId>
-      <version>2.7.2</version>
+      <version>2.5.5</version>
     </dependency>
   </dependencies>
   <build>
@@ -27,7 +43,7 @@
       <plugin>
         <groupId>io.ciera</groupId>
         <artifactId>ciera-maven-plugin</artifactId>
-        <version>2.7.2</version>
+        <version>2.5.5</version>
         <executions>
           <execution>
             <id>pre-build</id>

@@ -7,6 +7,27 @@ INSERT INTO O_OBJ
 	'Square',
 	'',
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("eef5e2bb-7c51-4262-a668-d1ec28abf1ca",
+	"bbc4cb47-fc80-4708-b636-a12c191040b3",
+	'occupant',
+	'',
+	"9c273cf5-40ba-4131-bd15-84879de77235",
+	1,
+	'select any p from instances of Piece;
+return p;',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	1);
+INSERT INTO S_DT_PROXY
+	VALUES ("9c273cf5-40ba-4131-bd15-84879de77235",
+	"00000000-0000-0000-0000-000000000000",
+	'inst_ref<Piece>',
+	'',
+	'',
+	'../board.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"bbc4cb47-fc80-4708-b636-a12c191040b3");

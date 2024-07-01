@@ -10,7 +10,7 @@ INSERT INTO O_OBJ
 INSERT INTO O_TFR
 	VALUES ("f3fca065-7db2-4412-9275-70b668a6ad27",
 	"d4745e63-a0bc-44fa-a237-f63f1e478ac1",
-	'findsquare',
+	'from_square',
 	'',
 	"d5732df7-1784-4839-ad60-8c7d5424f211",
 	0,
@@ -24,7 +24,7 @@ return sq;',
 INSERT INTO O_TPARM
 	VALUES ("59b1a0b1-8790-424d-b109-f5b24a4269ab",
 	"f3fca065-7db2-4412-9275-70b668a6ad27",
-	'ident',
+	'move',
 	"ba5eda7a-def5-0000-0000-000000000004",
 	0,
 	'',
@@ -44,12 +44,37 @@ INSERT INTO O_TFR
 	'',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
-	'square = Move::findsquare( ident:self.fromto );',
+	'select any src from instances of Square;
+src = Move::from_square( move:self.Notation );
+moved_piece = src.occupant();',
+	1,
+	'',
+	"d341eed6-c684-4023-9e7b-16680aadc829",
+	0,
+	2);
+INSERT INTO O_TFR
+	VALUES ("d341eed6-c684-4023-9e7b-16680aadc829",
+	"d4745e63-a0bc-44fa-a237-f63f1e478ac1",
+	'to_square',
+	'',
+	"d5732df7-1784-4839-ad60-8c7d5424f211",
+	0,
+	'select any sq from instances of Square;
+return sq;',
 	1,
 	'',
 	"f3fca065-7db2-4412-9275-70b668a6ad27",
 	0,
-	2);
+	1);
+INSERT INTO O_TPARM
+	VALUES ("5441e3c9-aaf8-49d5-a5b9-0b78ca4182b3",
+	"d341eed6-c684-4023-9e7b-16680aadc829",
+	'move',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
 INSERT INTO O_NBATTR
 	VALUES ("9acec2ab-6afe-42ac-9ab7-f9a7087eeddd",
 	"d4745e63-a0bc-44fa-a237-f63f1e478ac1");
@@ -60,10 +85,10 @@ INSERT INTO O_ATTR
 	VALUES ("9acec2ab-6afe-42ac-9ab7-f9a7087eeddd",
 	"d4745e63-a0bc-44fa-a237-f63f1e478ac1",
 	"00000000-0000-0000-0000-000000000000",
-	'fromto',
+	'Notation',
 	'',
 	'',
-	'fromto',
+	'Notation',
 	0,
 	"ba5eda7a-def5-0000-0000-000000000004",
 	'',
